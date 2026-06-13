@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "project"
+version = "0.1.0"
+description = "A standard scaffold"
+
+[tool.ruff]
+line-length = 88
+
+[tool.black]
+line-length = 88
+
+[tool.mypy]
+python_version = "3.10"
+files = "src"
