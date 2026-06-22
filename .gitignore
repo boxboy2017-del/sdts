@@ -5,3 +5,11 @@ __pycache__/
 .env.local
 .vscode/
 build/
+dist/
+*.egg-info/
+.python-version
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.pytest_cache/

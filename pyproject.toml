@@ -1,7 +1,43 @@
-[tool.poetry]
-name = "project"
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sdts"
 version = "0.1.0"
-description = "A standard scaffold"
+description = "A standard open-source Python scaffold."
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+license = { text = "MIT" }
+authors = [
+  { name = "Your Name", email = "you@example.com" },
+]
+dependencies = [
+  "selenium",
+  "requests",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourname/sdts"
+Repository = "https://github.com/yourname/sdts"
+Documentation = "https://github.com/yourname/sdts#readme"
+
+[project.scripts]
+sdts = "sdts:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["sdts*"]
 
 [tool.ruff]
 line-length = 88

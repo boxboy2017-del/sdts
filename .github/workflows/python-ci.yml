@@ -30,6 +30,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           if [ -f requirements-dev.txt ]; then pip install -r requirements-dev.txt; fi
+          python -m pip install -e .
       - name: Lint (ruff)
         run: |
           ruff check .
@@ -45,7 +46,6 @@ jobs:
         with:
           name: coverage-report
           path: coverage.xml
-
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
         with:
